@@ -1,0 +1,109 @@
+
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blanchedalmond ;
+        }
+        p{
+            display: block;
+            text-align: center;
+        }
+        .form1{
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin: auto;
+            
+        }
+        .form2{
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin: auto;
+            margin-top: 70px;
+            
+        }
+        fieldset{
+            background-color: cornsilk;
+            border-radius: 10px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+        <!--Insert and image -->
+    <p>
+        <img src="pizza.jpg" alt="Logo pizza" width="200" height="200">
+    </p>
+    <form class="form1" action="/submit.php" method="get">
+        <!--this part is the information about the order-->
+    <fieldset>
+        <legend>
+            <b>SELECT YOUR ORDER</b>
+        </legend>
+        <label for="placeorder">Place order for</label>
+        <select name="placeorder">
+            <option value="pickup">Pick up</option>
+            <option value="delivery">Delivery</option>
+        </select><br>
+        <label for="numberpizza">Number of pizzas</label>
+        <input type="number" name="numberpizza"><br>
+        <label for="size">Size (number of slices)</label>
+        <select name="size">
+            <option value="four">4</option>
+            <option value="six">6</option>
+            <option value="eight">8</option>
+            <option value="twelve">12</option>
+        </select><br>
+        <label for="shape">Shape</label>
+        <select name="shape">
+            <option value="square">Square</option>
+            <option value="round">Round</option>
+        </select><br>
+        <label for="toppings">Toppings:</label><br>
+        <input type="radio" id="pepperoni" name="pepperoni" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label><br>
+        <input type="radio" id="onion" name="onion" value="onion">
+        <label for="onion">Caramelised onion</label><br>
+        <input type="radio" id="mushrooms" name="mushrooms" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label><br>
+        <input type="radio" id="bbq" name="bbq" value="bbq">
+        <label for="bbq">BBQ chicken</label><br><br>
+        <label type="crust">Crust Type</label>
+        <select name="crust">
+            <option value="deepdish">Deep dish</option>
+            <option value="thincrust">Thin crust</option>
+            <option value="handtossed">Hand tossed</option>
+        </select><br><br>
+        <button type="reset" name="reset">Reset</button><br><br>
+        <button type="submit" name="submit">Submit</button>
+
+    </fieldset>
+    </form>
+     <!--this part is the information about the client-->
+    <form class="form2">
+        <fieldset>
+            <legend>
+                <b>CLIENT INFORMATION</b>
+            </legend>
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address"><br>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date"><br>
+            <label for="phone">Telephone</label>
+            <input type="tel" id="phone" name="phone"><br><br>
+            <button type="reset" name="reset">Reset</button>
+        </fieldset>
+    </form>
+
+</body> 
+</html>
